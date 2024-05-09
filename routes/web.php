@@ -15,14 +15,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('landing');
+    return view('land');
 })->name('index');
 
 Route::get('/chat', function () {
     return view('chat');
 })->name('chat');
 
-
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact');
 
 Route::get('/patient', function () {
     return view('index');
@@ -31,6 +33,10 @@ Route::get('/patient', function () {
 Route::get('/about', function () {
     return view('about');
 })->name('about');
+
+Route::get('/land', function () {
+    return view('land');
+})->name('land');
 
 Route::get('/registerpage', function () {
     return view('registerPage');
@@ -59,4 +65,4 @@ Route::get('/api/user-id', function () {
 })->middleware('auth');
 
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
